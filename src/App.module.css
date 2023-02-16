@@ -1,0 +1,14 @@
+
+.headerLogo {
+    height: 48px;
+    margin: 26px;
+    color: white;
+}
+
+.mainLayer {
+    min-height: 100vh;
+}
+
+.content {
+    margin: 16px
+}
