@@ -1,5 +1,5 @@
 import styles from './App.module.css'
-import {Navigate, Route, Routes} from 'react-router-dom'
+import {Navigate, Route, Routes, useLocation} from 'react-router-dom'
 import {YouTubeSearchPage} from './components/Main/Profile/Search/SearchContainer'
 import React, {FC, useEffect, useState} from 'react'
 import {ActionTypes, initializationing} from './redux/authReducer'
@@ -28,6 +28,7 @@ export const App: FC = () => {
   const initialization = useSelector(getInitialization)
 
   const dispatch: any = useDispatch()
+  const location = useLocation()
 
   useEffect(() => {
     dispatch(initializationing())
@@ -43,7 +44,7 @@ export const App: FC = () => {
           collapsed={collapsed}
           onCollapse={(value) => setCollapsed(value)}>
           {!collapsed && <h2 className={styles.headerLogo}>YouTube</h2>}
-          <SideBar />
+          <SideBar location={location.pathname} />
         </Sider>
         <Layout className="site-layout">
           <Header />
@@ -55,10 +56,19 @@ export const App: FC = () => {
                 background: colorBgContainer,
               }}>
               <Routes>
-                <Route path="/" element={<Navigate to={'/search'} />} />
-                <Route path="/search" element={<YouTubeSearchPage />} />
-                <Route path="/featuredQueries" element={<FavoritesPage />} />
-                <Route path="/login" element={<Login />} />
+                <Route
+                  path="YoutubeApi_2.0/"
+                  element={<Navigate to={'YoutubeApi_2.0/search'} />}
+                />
+                <Route
+                  path="YoutubeApi_2.0/search"
+                  element={<YouTubeSearchPage />}
+                />
+                <Route
+                  path="YoutubeApi_2.0/featuredQueries"
+                  element={<FavoritesPage />}
+                />
+                <Route path="YoutubeApi_2.0/login" element={<Login />} />
 
                 <Route path="*" element={<div>404 NOT FOUND</div>} />
               </Routes>

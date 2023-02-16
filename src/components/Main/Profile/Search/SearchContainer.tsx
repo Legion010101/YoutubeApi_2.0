@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {useSelector} from 'react-redux'
 import {
   getAccessToken,
@@ -22,7 +22,7 @@ export const YouTubeSearchPage = () => {
     setSaveMode(false)
   }
   if (!accessToken) {
-    return <Navigate to={'/login'} />
+    return <Navigate to={'/YoutubeApi_2.0/login'} />
   } else {
     return (
       <div className={styles.containerSearchPage}>

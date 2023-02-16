@@ -13,7 +13,7 @@ import {getAccessToken} from '../../../redux/reduxSelectors/searchPageSelector'
 const Login: FC = () => {
   const accessToken = useSelector(getAccessToken)
   if (accessToken) {
-    return <Navigate to={'/search'} />
+    return <Navigate to={'/YoutubeApi_2.0/search'} />
   }
   return (
     <div className={style.loginContainer}>
@@ -44,7 +44,7 @@ export const LoginForm: FC = () => {
   }
   return (
     <Formik initialValues={initialValues} validateOnBlur onSubmit={onSubmit}>
-      {({values, errors, touched, status}) => (
+      {({values, status}) => (
         <Form>
           <div>
             <div className={style.loginForm}>

@@ -9,7 +9,9 @@ import {
   getAccessToken,
   getAuthorizedUser,
 } from '../../redux/reduxSelectors/searchPageSelector'
-import {ActionTypes, logoutUser} from '../../redux/authReducer'
+import {logoutUser} from '../../redux/authReducer'
+import {ActionTypes} from '../../redux/SearchPageReducer'
+
 import {actionsYouTubeSearch, videoFromYT} from '../../redux/SearchPageReducer'
 
 const Header: FC = () => {
@@ -28,7 +30,6 @@ const Header: FC = () => {
         videoDuration: 'any',
       }),
       // @ts-ignore
-
       dispatch(actionsYouTubeSearch.setVideosToShow(null)),
     )
   }

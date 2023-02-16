@@ -158,7 +158,7 @@ export const getVideoFromYouTube =
 export default SearchPageReducer
 
 type initialStateType = typeof initialState
-type ActionTypes = InferActionType<typeof actionsYouTubeSearch>
+export type ActionTypes = InferActionType<typeof actionsYouTubeSearch>
 export type ThankType = ThankTypeCreator<ActionTypes>
 export type videoFromYT = {
   kind: string

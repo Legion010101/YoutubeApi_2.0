@@ -23,7 +23,7 @@ export const FavoritesPage = () => {
   }, [])
 
   if (!accessToken) {
-    return <Navigate to={'/login'} />
+    return <Navigate to={'/YoutubeApi_2.0/login'} />
   } else {
     return (
       <>

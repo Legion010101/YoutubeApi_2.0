@@ -39,7 +39,7 @@ export const SearchCart: FC<propsType> = ({request}) => {
 
   const SearchVideo = () => {
     dispatch(getVideoFromYouTube(q, maxResults, order, videoDuration))
-    navigate('/search')
+    navigate('/YoutubeApi_2.0/search')
   }
 
   return (

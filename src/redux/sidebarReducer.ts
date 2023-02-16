@@ -1,7 +1,7 @@
 const initialState = {
   listNav: [
-    {to: '/search', text: 'Поиск', key: 1},
-    {to: '/featuredQueries', text: 'Избранное', key: 2},
+    {to: 'YoutubeApi_2.0/search', text: 'Поиск', key: 1},
+    {to: 'YoutubeApi_2.0/featuredQueries', text: 'Избранное', key: 2},
   ],
 }
 
