@@ -21,55 +21,55 @@ const {Content, Footer, Sider} = Layout
 export type MenuItem = Required<MenuProps>['items'][number]
 
 export const App: FC = () => {
-  const [collapsed, setCollapsed] = useState(false)
-  const {
-    token: {colorBgContainer},
-  } = theme.useToken()
-  const initialization = useSelector(getInitialization)
+    const [collapsed, setCollapsed] = useState(false)
+    const {
+        token: {colorBgContainer},
+    } = theme.useToken()
+    const initialization = useSelector(getInitialization)
 
-  const dispatch: any = useDispatch()
-  const location = useLocation()
+    const dispatch: any = useDispatch()
+    const location = useLocation()
 
-  useEffect(() => {
-    dispatch(initializationing())
-  }, [])
+    useEffect(() => {
+        dispatch(initializationing())
+    }, [])
 
-  if (!initialization) {
-    return <Preloader toggle={true} />
-  } else {
-    return (
-      <Layout className={styles.mainLayer}>
-        <Sider
-          collapsible
-          collapsed={collapsed}
-          onCollapse={(value) => setCollapsed(value)}>
-          {!collapsed && <h2 className={styles.headerLogo}>YouTube</h2>}
-          <SideBar location={location.pathname} />
-        </Sider>
-        <Layout className="site-layout">
-          <Header />
-          <Content className={styles.content}>
-            <div
-              style={{
-                padding: 24,
-                minHeight: 360,
-                background: colorBgContainer,
-              }}>
-              <Routes>
-                <Route path="/" element={<Navigate to={'/search'} />} />
-                <Route path="search" element={<YouTubeSearchPage />} />
-                <Route path="featuredQueries" element={<FavoritesPage />} />
-                <Route path="login" element={<Login />} />
+    if (!initialization) {
+        return <Preloader toggle={true}/>
+    } else {
+        return (
+            <Layout className={styles.mainLayer}>
+                <Sider
+                    collapsible
+                    collapsed={collapsed}
+                    onCollapse={(value) => setCollapsed(value)}>
+                    {!collapsed && <h2 className={styles.headerLogo}>YouTube</h2>}
+                    <SideBar location={location.pathname}/>
+                </Sider>
+                <Layout className="site-layout">
+                    <Header/>
+                    <Content className={styles.content}>
+                        <div
+                            style={{
+                                padding: 24,
+                                minHeight: 360,
+                                background: colorBgContainer,
+                            }}>
+                            <Routes>
+                                <Route path="/" element={<Navigate to={'/search'}/>}/>
+                                <Route path="/search" element=n{<YouTubeSearchPage/>} />
+                                <Route path="/featuredQueries" element={<FavoritesPage/>}/>
+                                <Route path="/login" element={<Login/>}/>
 
-                <Route path="*" element={<div>404 NOT FOUND</div>} />
-              </Routes>
-            </div>
-          </Content>
-          <Footer style={{textAlign: 'center'}}>Production of Danil</Footer>
-        </Layout>
-      </Layout>
-    )
-  }
+                                <Route path="*" element={<div>404 NOT FOUND</div>}/>
+                            </Routes>
+                        </div>
+                    </Content>
+                    <Footer style={{textAlign: 'center'}}>Production of Danil</Footer>
+                </Layout>
+            </Layout>
+        )
+    }
 }
 
 type appDispatch = ThunkDispatch<AppStateType, any, ActionTypes>
