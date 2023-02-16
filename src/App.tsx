@@ -61,7 +61,7 @@ export const App: FC = () => {
                   element={<Navigate to={'/YoutubeApi_2.0/search'} />}
                 />
                 <Route
-                  path="/YoutubeApi_2.0/search"
+                  path="/YoutubeApi_2.0/search/"
                   element={<YouTubeSearchPage />}
                 />
                 <Route
