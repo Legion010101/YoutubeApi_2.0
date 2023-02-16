@@ -2,7 +2,7 @@
   "name": "me-app-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://legion010101.github.io/You-Tube-api/",
+  "homepage": "https://github.com/Legion010101/YoutubeApi_2.0/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
