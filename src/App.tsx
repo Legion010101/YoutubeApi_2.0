@@ -57,18 +57,18 @@ export const App: FC = () => {
               }}>
               <Routes>
                 <Route
-                  path="YoutubeApi_2.0/"
-                  element={<Navigate to={'YoutubeApi_2.0/search'} />}
+                  path="/YoutubeApi_2.0/"
+                  element={<Navigate to={'/YoutubeApi_2.0/search'} />}
                 />
                 <Route
-                  path="YoutubeApi_2.0/search"
+                  path="/YoutubeApi_2.0/search"
                   element={<YouTubeSearchPage />}
                 />
                 <Route
-                  path="YoutubeApi_2.0/featuredQueries"
+                  path="/YoutubeApi_2.0/featuredQueries"
                   element={<FavoritesPage />}
                 />
-                <Route path="YoutubeApi_2.0/login" element={<Login />} />
+                <Route path="/YoutubeApi_2.0/login" element={<Login />} />
 
                 <Route path="*" element={<div>404 NOT FOUND</div>} />
               </Routes>

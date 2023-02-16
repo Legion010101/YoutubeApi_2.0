@@ -51,9 +51,7 @@ export const SideBar: FC<PropsType> = ({location}) => {
 
     return getItem(<NavLink to={link.to}>{link.text}</NavLink>, link.key, icon)
   })
-  // useLocation -> pathname
-  // useEffect item.link === pathname
-  // setState index
+
   return (
     <Menu
       theme="dark"
