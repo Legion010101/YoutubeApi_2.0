@@ -22,7 +22,7 @@ export const YouTubeSearchPage = () => {
     setSaveMode(false)
   }
   if (!accessToken) {
-    return <Navigate to={'/YoutubeApi_2.0/login'} />
+    return <Navigate to={'/login'} />
   } else {
     return (
       <div className={styles.containerSearchPage}>

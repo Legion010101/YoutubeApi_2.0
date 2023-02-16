@@ -25,11 +25,11 @@ export const SideBar: FC<PropsType> = ({location}) => {
   const [activeKey, setActiveKey] = useState('1')
   useEffect(() => {
     switch (location) {
-      case '/YoutubeApi_2.0/search': {
+      case '/search': {
         setActiveKey('1')
         break
       }
-      case '/YoutubeApi_2.0/featuredQueries': {
+      case '/featuredQueries': {
         setActiveKey('2')
         break
       }

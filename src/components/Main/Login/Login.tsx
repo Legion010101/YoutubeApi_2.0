@@ -13,7 +13,7 @@ import {getAccessToken} from '../../../redux/reduxSelectors/searchPageSelector'
 const Login: FC = () => {
   const accessToken = useSelector(getAccessToken)
   if (accessToken) {
-    return <Navigate to={'/YoutubeApi_2.0/search'} />
+    return <Navigate to={'/search'} />
   }
   return (
     <div className={style.loginContainer}>
