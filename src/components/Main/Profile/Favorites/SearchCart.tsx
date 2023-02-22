@@ -8,7 +8,7 @@ import {
 import {useNavigate} from 'react-router'
 import {SaveSearchSelectorForm} from '../Search/SaveSearchForm'
 import {getAuthorizedUser} from '../../../../redux/reduxSelectors/searchPageSelector'
-import styles from './Favorite.module.css'
+import styles from './Favorite.module.sass'
 import {
   DeleteOutlined,
   SearchOutlined,

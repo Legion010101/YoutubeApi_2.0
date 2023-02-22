@@ -9,7 +9,7 @@ import {
 } from '../../../../redux/reduxSelectors/searchPageSelector'
 import {youtubeRequestsType} from '../../../../types/types'
 import {validateRequired} from '../../../../utility/validate'
-import styles from './Search.module.css'
+import styles from './Search.module.sass'
 
 export const SaveSearchSelectorForm: FC<PropsType> = ({
   toggleEditMode,

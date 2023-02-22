@@ -8,7 +8,7 @@ import {
 import {SearchCart} from './SearchCart'
 import {actionsYouTubeSearch} from '../../../../redux/SearchPageReducer'
 import {Navigate} from 'react-router-dom'
-import styles from './Favorite.module.css'
+import styles from './Favorite.module.sass'
 
 export const FavoritesPage = () => {
   const favoriteSearch = useSelector(getFavoriteSearchSelector)

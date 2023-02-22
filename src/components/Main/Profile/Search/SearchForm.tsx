@@ -8,7 +8,7 @@ import {
 import {useDispatch, useSelector} from 'react-redux'
 import {getDataRequest} from '../../../../redux/reduxSelectors/searchPageSelector'
 import {validateRequired} from '../../../../utility/validate'
-import styles from './Search.module.css'
+import styles from './Search.module.sass'
 import {FilterOutlined, SearchOutlined} from '@ant-design/icons'
 import classnames from 'classnames'
 

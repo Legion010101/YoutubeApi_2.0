@@ -8,7 +8,7 @@ import {VideoCart} from './VideoCart'
 import {VideoSelectorForm} from './SearchForm'
 import {SaveSearchSelectorForm} from './SaveSearchForm'
 import {Navigate} from 'react-router-dom'
-import styles from './Search.module.css'
+import styles from './Search.module.sass'
 
 export const YouTubeSearchPage = () => {
   const [saveMode, setSaveMode] = useState(false)

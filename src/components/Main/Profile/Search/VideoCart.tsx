@@ -1,5 +1,5 @@
 import {FC} from 'react'
-import styles from './Search.module.css'
+import styles from './Search.module.sass'
 
 export const VideoCart: FC<propsType> = ({video}) => {
   return (
